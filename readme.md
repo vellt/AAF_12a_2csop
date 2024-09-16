@@ -6,27 +6,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace Dolgozat_vnev_knev
+namespace ConsoleApp9
 {
     class Program
     {
-        enum Szamolj { Maganhangzokat, Massalhangzokat, Kisbetuket }
+        enum Szamolj { Szokozoket, Massalhangzokat, Betuket }
         static void Main(string[] args)
         {
             string[] adatok = Feltolt();
             for (int i = 0; i < adatok.Length; i++)
             {
                 string adat = adatok[i];
-                if (Fizetes(adat)>300_000)
+                if (Szerzo(adat).Length <= 10) 
                 {
                     Console.WriteLine($"Eredeti szöveg: {adat}");
-                    Console.WriteLine($"Magánhangzók száma: {Szamlalo(adat,Szamolj.Maganhangzokat)} db");
-                    Console.WriteLine($"Mássalhangzók száma: {Szamlalo(adat,Szamolj.Massalhangzokat)} db");
-                    Console.WriteLine($"Kisbetűk száma: {Szamlalo(adat,Szamolj.Kisbetuket)} db");
+                    Console.WriteLine($"Szóközök száma: {Szamlalo(adat, Szamolj.Szokozoket)} db");
+                    Console.WriteLine($"Mássalhagzók száma: {Szamlalo(adat, Szamolj.Massalhangzokat)} db");
+                    Console.WriteLine($"Betűk száma: {Szamlalo(adat, Szamolj.Betuket)} db");
                     Console.WriteLine("módosított szöveg:");
-                    Console.WriteLine($"\t- transzformáció: {Modositott(adat)}");
-                    Console.WriteLine($"\t- karakterhossza: {Modositott(adat).Length}");
+                    Console.WriteLine($"\t-transzformáció: {Modositott(adat)}");
+                    Console.WriteLine($"\t-karakterhossza: {Modositott(adat).Length}");
                     Console.WriteLine();
+
                 }
             }
             Console.ReadKey();
@@ -34,7 +35,7 @@ namespace Dolgozat_vnev_knev
 
         private static string[] Feltolt()
         {
-            return File.ReadAllLines("berek.txt");
+            return File.ReadAllLines("konyvek.txt");
         }
 
         private static int Szamlalo(string szoveg, Szamolj szamolj)
@@ -45,42 +46,32 @@ namespace Dolgozat_vnev_knev
                 char karakter = szoveg[i];
                 switch (szamolj)
                 {
-                    case Szamolj.Maganhangzokat:
-                        if (
-                            karakter=='a' || 
-                            karakter=='A' ||
-                            karakter=='e' ||
-                            karakter=='E' ||
-                            karakter=='i' ||
-                            karakter=='I' ||
-                            karakter=='u' ||
-                            karakter=='U' ||
-                            karakter=='o' ||
-                            karakter=='O' )
+                    case Szamolj.Szokozoket:
+                        if(karakter==' ')
                         {
                             db++;
                         }
                         break;
                     case Szamolj.Massalhangzokat:
                         if (!(
-                            karakter == 'a' ||
-                            karakter == 'A' ||
-                            karakter == 'e' ||
-                            karakter == 'E' ||
-                            karakter == 'i' ||
-                            karakter == 'I' ||
-                            karakter == 'u' ||
-                            karakter == 'U' ||
-                            karakter == 'o' ||
-                            karakter == 'O' ||
-                            karakter == ' ' ||
-                            karakter>='0' && karakter<='9'))
+                            karakter=='a' ||
+                            karakter=='A' ||
+                            karakter=='e' ||
+                            karakter=='E' ||
+                            karakter=='i' ||
+                            karakter=='I' ||
+                            karakter=='o' ||
+                            karakter=='O' ||
+                            karakter=='u' ||
+                            karakter=='U' ||
+                            karakter==' ' ||
+                            karakter==',' ))
                         {
                             db++;
                         }
                         break;
-                    case Szamolj.Kisbetuket:
-                        if (karakter>='a' && karakter<='z')
+                    case Szamolj.Betuket:
+                        if (karakter>='a' && karakter<='z' || karakter>='A' && karakter<='Z')
                         {
                             db++;
                         }
@@ -92,20 +83,19 @@ namespace Dolgozat_vnev_knev
 
         private static string Modositott(string szoveg)
         {
-            string ujSzoveg="|";
+            string ujSzoveg = "|";
             for (int i = szoveg.Length - 1; i >= 0; i--)
             {
                 char karakter = szoveg[i];
-                if (!(karakter>='A' && karakter <='Z' || karakter==' '))
+                if (!(karakter==' ' || karakter>='A' && karakter<='Z'))
                 {
-                    if(karakter>='a' && karakter <= 'z')
+                    if (karakter>='a' && karakter<='z')
                     {
                         ujSzoveg += (char)(karakter - 32);
                     }
                     else
                     {
-                        // számok
-                        ujSzoveg += karakter;
+                        ujSzoveg += karakter; // itt kéne ,
                     }
                     ujSzoveg += '|';
                 }
@@ -113,22 +103,22 @@ namespace Dolgozat_vnev_knev
             return ujSzoveg;
         }
 
-        private static int Fizetes(string szoveg)
+        private static string Szerzo(string szoveg)
         {
             string forditott = "";
-            for (int i = szoveg.Length - 1; szoveg[i]!=' '; i--)
+
+            for (int i = szoveg.Length - 1; szoveg[i]!=','; i--)
             {
-                char karakter = szoveg[i];
-                forditott += karakter;
+                forditott += szoveg[i];
             }
 
             string visszaforditott = "";
-            for (int i = forditott.Length - 1; i >= 0; i--)
+            for (int i = forditott.Length - 2; i >= 0; i--)
             {
                 visszaforditott += forditott[i];
             }
 
-            return Convert.ToInt32(visszaforditott);
+            return visszaforditott;
         }
     }
 }
