@@ -23,20 +23,15 @@ namespace WpfApp10
         public MainWindow()
         {
             InitializeComponent();
-            gomb.Click += Gomb_Click;
-            
+            osszeadas.Click += Osszeadas_Click;
         }
 
-        private void Gomb_Click(object sender, RoutedEventArgs e)
+        private void Osszeadas_Click(object sender, RoutedEventArgs e)
         {
-            if (ker.Text.Trim().Length==0)
-            {
-                MessageBox.Show("*-al jelölt mezőket kötelező kitölteni!");
-            }
-            else
-            {
-                MessageBox.Show($"A nevem {ker.Text}\n{vez.Text} {ker.Text}", "007");
-            }
+            int sz1 = szam1.Text.Trim().Length == 0 ? 0 : Convert.ToInt32(szam1.Text);
+            int sz2 = szam2.Text.Trim().Length == 0 ? 0 : Convert.ToInt32(szam2.Text);
+            int eredmeny = sz1 + sz2;
+            MessageBox.Show($"Összegük: {eredmeny}");
         }
     }
 }

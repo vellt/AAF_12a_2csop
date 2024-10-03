@@ -8,20 +8,26 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Icon="hand.ico"
-        Title="Üdvözlő app" Height="300" Width="800">
+        Title="Számológép" Height="300" Width="1000">
     <Grid>
         <StackPanel Orientation="Horizontal" 
                     Background="White"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center">
-            <TextBlock Text="Név" Margin="10" FontSize="40"/>
-            <GroupBox Header="Vezetéknév" BorderBrush="Transparent" Margin="10">
-                <TextBox Name="vez" Width="200"/>
+            <TextBlock Text="Számok" Margin="10" FontSize="40"/>
+            <GroupBox Header="Szám 1" BorderBrush="Transparent" Margin="10">
+                <TextBox Name="szam1" Width="200" FontSize="20"/>
             </GroupBox>
-            <GroupBox Header="Keresztnév *" BorderBrush="Transparent" Margin="10">
-                <TextBox Name="ker" Width="200"/>
+            <GroupBox Header="Szám 2" BorderBrush="Transparent" Margin="10">
+                <TextBox Name="szam2" Width="200" FontSize="20"/>
             </GroupBox>
-            <Button Name="gomb" Content="helló" Width="100" Margin="10"/>
+            <Button Name="osszeadas" 
+                    Content="+" 
+                    Background="Orange" 
+                    Foreground="White" 
+                    FontSize="30" 
+                    Width="50" 
+                    Margin="10"/>
         </StackPanel>
     </Grid>
 </Window>
