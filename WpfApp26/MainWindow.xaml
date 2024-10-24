@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp26.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp26"
+        mc:Ignorable="d"
+        Icon="numbers.ico"
+        WindowStartupLocation="CenterScreen"
+        Title="Barkóba" Height="450" Width="800">
+    <Grid Background="DarkGreen">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <TextBlock Text="Gondolam egy számra! (1-10 között)"
+                       HorizontalAlignment="Center"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       Foreground="White"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Name="szam" Text="1"
+                           FontSize="30"
+                           Foreground="White"/>
+                <Slider Name="csuszka" Width="600" VerticalAlignment="Center" Margin="10 0"
+                        Minimum="1" Maximum="10" Value="1" IsSnapToTickEnabled="True"/>
+                <TextBlock Text="10"
+                           FontSize="30"
+                           Foreground="White"/>
+            </StackPanel>
+            <Button Name="gomb" Content="Szerintem ez az a szám"
+                    Width="450"
+                    FontSize="30"
+                    Background="Yellow"
+                    FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>
