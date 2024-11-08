@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp31.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp31"
+        mc:Ignorable="d"
+        Icon="typewriter.ico"
+        Title="MainWindow" Height="500" Width="400">
+    <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+        <TextBlock Text="Írd be a szöveget:" FontSize="25" Margin="10"/>
+        <TextBox Name="szovegBevitel" Height="300" FontSize="20" Margin="10" 
+                 BorderThickness="3" TextWrapping="Wrap"
+                 Padding="5"/>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Karakterek száma: " FontSize="25"/>
+            <TextBlock Name="karakter" Text="0" FontSize="25" FontWeight="Black" Foreground="Red"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
