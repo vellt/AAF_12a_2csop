@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D4C283A9-A037-4E65-B56F-EAAAEB05D7DE}</ProjectGuid>
+    <ProjectGuid>{16518BB4-4FF5-4A3F-A1CE-82559CE77022}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WpfApp32</RootNamespace>
-    <AssemblyName>WpfApp32</AssemblyName>
+    <RootNamespace>WpfApp33</RootNamespace>
+    <AssemblyName>WpfApp33</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -95,13 +95,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="dice.ico" />
-    <Resource Include="dice1.png" />
-    <Resource Include="dice2.png" />
-    <Resource Include="dice3.png" />
-    <Resource Include="dice4.png" />
-    <Resource Include="dice5.png" />
-    <Resource Include="dice6.png" />
+    <Resource Include="num.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

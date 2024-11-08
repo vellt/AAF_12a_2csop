@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WpfApp32
+namespace WpfApp33
 {
     /// <summary>
     /// Interaction logic for App.xaml
