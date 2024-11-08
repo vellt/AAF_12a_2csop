@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp31
+namespace WpfApp32
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,13 +23,15 @@ namespace WpfApp31
         public MainWindow()
         {
             InitializeComponent();
-            szovegBevitel.TextChanged += SzovegBevitel_TextChanged;
+            hatter.MouseUp += Hatter_MouseUp;
         }
 
-        private void SzovegBevitel_TextChanged(object sender, TextChangedEventArgs e)
+        private void Hatter_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            int karakterHossza = szovegBevitel.Text.Length;
-            karakter.Text = karakterHossza.ToString();
+            Random r = new Random();
+            int szam = r.Next(1, 7); //[1,6]
+            // képet c# kódból mindig így tudunk behelyezni
+            dobokocka.Source = new BitmapImage(new Uri($"dice{szam}.png", UriKind.Relative));
         }
     }
 }
