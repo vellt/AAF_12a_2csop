@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfApp43.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp43"
+        mc:Ignorable="d"
+        Icon="colour.ico"
+        Background="Beige"
+        BorderBrush="White"
+        BorderThickness="5"
+        WindowStartupLocation="CenterScreen"
+        Title="Szinezés" Height="300" Width="350">
+    <Grid>
+        <StackPanel  Orientation="Vertical">
+            <!--Első gyermekelem-->
+            <Border Margin="10" BorderBrush="Black" BorderThickness="5">
+                <Grid Name="kijelzo" Height="100" Background="Black"/>
+            </Border>
+            <!--Második - RED-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Name="pirosErtek" Text="0" FontSize="20"/>
+                <Slider Name="pirosCsuszka" Width="200" Margin="20 0" VerticalAlignment="Center"
+                        Minimum="0" Maximum="255" Value="0" IsSnapToTickEnabled="True"/>
+                <TextBlock Text="255" FontSize="20"/>
+            </StackPanel>
+            <!--Harmadik GREEN-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Name="zoldErtek" Text="0" FontSize="20"/>
+                <Slider Name="zoldCsuszka" Width="200" Margin="20 0" VerticalAlignment="Center"
+                        Minimum="0" Maximum="255" Value="0" IsSnapToTickEnabled="True"/>
+                <TextBlock Text="255" FontSize="20"/>
+            </StackPanel>
+            <!--Negyedik BLUE-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Name="kekErtek" Text="0" FontSize="20"/>
+                <Slider Name="kekCsuszka" Width="200" Margin="20 0" VerticalAlignment="Center"
+                        Minimum="0" Maximum="255" Value="0" IsSnapToTickEnabled="True"/>
+                <TextBlock Text="255" FontSize="20"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
