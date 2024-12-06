@@ -90,13 +90,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="uzik.csv" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="szoveg.txt" />
     <Resource Include="topjoy.ico" />
     <Resource Include="topjoy.png" />
   </ItemGroup>

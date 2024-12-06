@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.IO;
 
 namespace WpfApp49
 {
@@ -25,7 +24,13 @@ namespace WpfApp49
         public MainWindow()
         {
             InitializeComponent();
-            uzik = File.ReadAllLines("uzik.csv").ToList();
+            uzik = new List<string>()
+            {
+                "uzi 1",
+                "uzi 2",
+                "uzi 3",
+                "uzi 4",
+            };
             gomb.Click += Gomb_Click;
         }
 
