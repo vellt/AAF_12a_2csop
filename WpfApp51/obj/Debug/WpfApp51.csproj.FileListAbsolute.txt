@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\WpfApp51\WpfApp51\bin\Debug\WpfApp51.exe.config
+C:\Users\user\source\repos\WpfApp51\WpfApp51\bin\Debug\WpfApp51.exe
+C:\Users\user\source\repos\WpfApp51\WpfApp51\bin\Debug\WpfApp51.pdb
+C:\Users\user\source\repos\WpfApp51\WpfApp51\obj\Debug\WpfApp51.csprojAssemblyReference.cache
+C:\Users\user\source\repos\WpfApp51\WpfApp51\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\WpfApp51\WpfApp51\obj\Debug\App.g.cs
+C:\Users\user\source\repos\WpfApp51\WpfApp51\obj\Debug\WpfApp51_MarkupCompile.cache
+C:\Users\user\source\repos\WpfApp51\WpfApp51\obj\Debug\WpfApp51_MarkupCompile.lref
+C:\Users\user\source\repos\WpfApp51\WpfApp51\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\WpfApp51\WpfApp51\obj\Debug\WpfApp51.g.resources
+C:\Users\user\source\repos\WpfApp51\WpfApp51\obj\Debug\WpfApp51.Properties.Resources.resources
+C:\Users\user\source\repos\WpfApp51\WpfApp51\obj\Debug\WpfApp51.csproj.GenerateResource.cache
+C:\Users\user\source\repos\WpfApp51\WpfApp51\obj\Debug\WpfApp51.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\WpfApp51\WpfApp51\obj\Debug\WpfApp51.exe
+C:\Users\user\source\repos\WpfApp51\WpfApp51\obj\Debug\WpfApp51.pdb
