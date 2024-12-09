@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp52.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp52"
+        mc:Ignorable="d"
+        Title="Az én zsiráfom" WindowStartupLocation="CenterScreen" Height="700" Width="300">
+    <StackPanel VerticalAlignment="Bottom">
+        <Image Source="images/fej.png" Width="100"/>
+        <StackPanel Name="nyakak">
+            <Image Source="images/nyak.png" Width="100"/>
+        </StackPanel>
+        <Image Source="images/lab.png" Width="100"/>
+        <TextBlock Name="eletkor" Margin="10" Text="Életkor: 1" TextAlignment="Center"/>
+        <Slider Name="csuszka" Width="100" Minimum="1" Maximum="10" Value="1" IsSnapToTickEnabled="True"
+                Margin="10 10 10 30"/>
+    </StackPanel>
+</Window>
