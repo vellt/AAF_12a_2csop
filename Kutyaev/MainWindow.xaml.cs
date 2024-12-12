@@ -29,7 +29,7 @@ namespace Kutyaev
         private void Gomb_Click(object sender, RoutedEventArgs e)
         {
             int szam = Convert.ToInt32(bevitel.Text);
-            szoveg.Text = (szam * 7).ToString();
+            szoveg.Text = Convert.ToString(szam * 7);
         }
     }
 }
