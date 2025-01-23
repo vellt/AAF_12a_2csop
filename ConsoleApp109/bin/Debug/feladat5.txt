@@ -1,9 +1,0 @@
-Sopron: 3 db
-P�cs: 4 db
-Gyula: 1 db
-Eger: 3 db
-Budapest: 4 db
-Tihany: 1 db
-Szolnok: 2 db
-Nagykanizsa: 2 db
-Cegl�d: 1 db
