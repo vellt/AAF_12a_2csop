@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4A8D1678-E517-4866-868A-5AC0F9192A9F}</ProjectGuid>
+    <ProjectGuid>{18E85BB0-3D98-4A65-A86B-BD2117FF6097}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp113</RootNamespace>
-    <AssemblyName>ConsoleApp113</AssemblyName>
+    <RootNamespace>ConsoleApp124</RootNamespace>
+    <AssemblyName>ConsoleApp124</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="nobeldijak.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
