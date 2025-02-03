@@ -1,7 +1,0 @@
-C:\Users\user\source\repos\ConsoleApp124\ConsoleApp124\bin\Debug\ConsoleApp124.exe.config
-C:\Users\user\source\repos\ConsoleApp124\ConsoleApp124\bin\Debug\ConsoleApp124.exe
-C:\Users\user\source\repos\ConsoleApp124\ConsoleApp124\bin\Debug\ConsoleApp124.pdb
-C:\Users\user\source\repos\ConsoleApp124\ConsoleApp124\obj\Debug\ConsoleApp124.csprojAssemblyReference.cache
-C:\Users\user\source\repos\ConsoleApp124\ConsoleApp124\obj\Debug\ConsoleApp124.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\ConsoleApp124\ConsoleApp124\obj\Debug\ConsoleApp124.exe
-C:\Users\user\source\repos\ConsoleApp124\ConsoleApp124\obj\Debug\ConsoleApp124.pdb
