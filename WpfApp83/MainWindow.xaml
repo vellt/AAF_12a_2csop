@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp83.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp83"
+        mc:Ignorable="d"
+        Icon="kepek/dino.ico"
+        Title="Dínók" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="kepek/back.jpg"/>
+        </Grid.Background>
+
+        <Grid Grid.Column="0" Grid.Row="1" Background="Green" Margin="15">
+            <Image Source="kepek/pic_large_allosaurus.gif" Margin="10" Stretch="UniformToFill"/>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="1" Background="Green" Margin="15">
+            <ScrollViewer>
+                <TextBlock FontSize="15" Margin="15" TextWrapping="Wrap" Foreground="White"
+                           Text="Brachiosaurus Méret: 22 méter A mellső lábában található nagy csontokról elnevezett Brachiosaurus hatalmas termetű szauropod volt; az egyik legnagyobb dinoszaurusz, melynek a teljes csontvázát ismerjük. A Brachiosaurus több mint tíz méter magas és huszonkét méter hosszú volt, súlya elérte a nyolcvan tonnát. Szárazföldi életet élt, a zsiráfhoz hasonlóan a fák koronájából legelészett. Egyenes, vésőszerű fogaival a legfelső ágakról is le tudta kopasztani a leveleket. Sok más szauropodtól eltérően a Brachiosaurusnak igen hosszú mellső lábai voltak, ami arra utal, hogy nyakát függőlegeshez közeli helyzetben tartotta. Egyes paleontológusok szerint a legismertebb faja, a Brachiosaurus brancai valójában önálló nemzetséget alkot, melynek neve Giraffatitan, vagyis óriás zsiráf. Akárhogy nevezzük is, egy ekkora élőlénynek szinte folyamatosan táplálkoznia kellett, hogy a hatalmas testet ellássa energiával."/>
+            </ScrollViewer>
+        </Grid>
+
+        <Button Grid.Column="0" Grid.Row="2" BorderBrush="Green" Background="Green"
+                Foreground="White" FontWeight="Bold" FontSize="20" Content="Előző" Margin="10"/>
+
+        <Button Grid.Column="1" Grid.Row="2" BorderBrush="Green" Background="Green"
+                Foreground="White" FontWeight="Bold" FontSize="20" Content="Következő" Margin="10"/>
+
+    </Grid>
+</Window>
