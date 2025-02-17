@@ -1,0 +1,17 @@
+name;house;yearOfBirth;image;strong
+Harry Potter;Griffendél;1980;https://hp-api.herokuapp.com/images/harry.jpg;4
+Hermione Granger;Griffendél;1979;https://hp-api.herokuapp.com/images/hermione.jpeg;3
+Ron Weasley;Griffendél;1980;https://hp-api.herokuapp.com/images/ron.jpg;4
+Draco Malfoy;Mardekár;1980;https://hp-api.herokuapp.com/images/draco.jpg;5
+Minerva McGonagall;Griffendél;1925;https://hp-api.herokuapp.com/images/mcgonagall.jpg;3
+Cedric Diggory;Hugrabug;1977;https://hp-api.herokuapp.com/images/cedric.png;1
+Severus Snape;Mardekár;1960;https://hp-api.herokuapp.com/images/snape.jpg;3
+Rubeus Hagrid;Griffendél;1928;https://hp-api.herokuapp.com/images/hagrid.png;5
+Neville Longbottom;Griffendél;1980;https://hp-api.herokuapp.com/images/neville.jpg;3
+Luna Lovegood;Hollóhát;1981;https://hp-api.herokuapp.com/images/luna.jpg;4
+Ginny Weasley;Griffendél;1981;https://hp-api.herokuapp.com/images/ginny.jpg;5
+Sirius Black;Griffendél;1959;https://hp-api.herokuapp.com/images/sirius.JPG;3
+Remus Lupin;Griffendél;1960;https://hp-api.herokuapp.com/images/lupin.jpg;3
+Arthur Weasley;Griffendél;1950;https://hp-api.herokuapp.com/images/arthur.jpg;5
+Bellatrix Lestrange;Mardekár;1951;https://hp-api.herokuapp.com/images/bellatrix.jpg;3
+Lord Voldemort;Mardekár;1926;https://hp-api.herokuapp.com/images/voldemort.jpg;4
