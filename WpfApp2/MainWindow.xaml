@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d" Background="Black" Icon="./images/movie.ico"
+        Title="Toplista" Height="550" Width="650">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="TOPLISTA" FontSize="80" Foreground="White" Grid.Row="0" Grid.Column="0"
+                   FontWeight="Black" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+
+        <ListBox Name="lista" Grid.Column="0" Grid.Row="1" Background="Black" Foreground="White"
+                 FontSize="30"/>
+
+        <Border Grid.Row="1" Grid.Column="1" Background="White" Margin="20" CornerRadius="30">
+            <StackPanel VerticalAlignment="Center">
+                <Ellipse x:Name="kep" Height="150" Width="150">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="./images/4.jpg"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <TextBlock Name="nev" Text="Harrison Ford" HorizontalAlignment="Center"
+                           FontSize="30" FontWeight="Bold" Margin="0 10"/>
+                <TextBlock Name="nepszeruseg" Text="Népszerűség: 78%" HorizontalAlignment="Center"
+                           FontSize="20" FontWeight="Bold"/>
+                <ProgressBar Name="indikator" Height="15" Margin="40 10" Minimum="0"
+                             Maximum="100" Value="78" Foreground="CadetBlue"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
