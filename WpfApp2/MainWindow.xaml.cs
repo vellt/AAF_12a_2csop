@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.Windows.Media.Animation;
 
 namespace WpfApp2
 {
@@ -42,13 +43,23 @@ namespace WpfApp2
             lista.SelectionChanged += Lista_SelectionChanged;
         }
 
-        private void Lista_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void Lista_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Szinesz szines = lista.SelectedItem as Szinesz;
             nev.Text = szines.Nev;
             nepszeruseg.Text = $"Népszerűség: {szines.Nepszeruseg}%";
             kep.Fill = new ImageBrush(new BitmapImage(new Uri(szines.Kep, UriKind.Relative)));
             indikator.Value = szines.Nepszeruseg;
+
+            ((Storyboard)TryFindResource("Storyboard1")).Begin();
+
+            /* 10x fusson le az animáció 1másodpercenként. Ehhez async kulcsszó kell a mezódusban
+            for (int i = 0; i < 10; i++)
+            {
+                ((Storyboard)TryFindResource("Storyboard1")).Begin();
+                await Task.Delay(1000);
+            }
+            */
         }
     }
 }
