@@ -39,12 +39,12 @@
                 <TextBlock Text="Súly" HorizontalAlignment="Center"
                            FontSize="15" Foreground="White" FontWeight="Black" Margin="0 0 0 10"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Background="DimGray">
+                    <Button Name="minusz" Background="DimGray">
                         <Image Source="./images/minus.png" Width="30"/>
                     </Button>
-                    <TextBlock Text="74" FontSize="25" FontWeight="Black"
+                    <TextBlock Name="suly" Text="74" FontSize="25" FontWeight="Black"
                                Foreground="White" Margin="15 0"/>
-                    <Button Background="DimGray">
+                    <Button Name="plusz" Background="DimGray">
                         <Image Source="./images/add.png" Width="30"/>
                     </Button>
                 </StackPanel>
@@ -54,7 +54,7 @@
         
 
         <!-- harmadik sor -->
-        <Button Grid.Row="2" Content="BMI kiszámítása" Grid.ColumnSpan="2"
+        <Button Name="szamitas" Grid.Row="2" Content="BMI kiszámítása" Grid.ColumnSpan="2"
                 FontSize="30" Padding="10" Background="OrangeRed"
                 Foreground="White" Margin="10"/>
     </Grid>
