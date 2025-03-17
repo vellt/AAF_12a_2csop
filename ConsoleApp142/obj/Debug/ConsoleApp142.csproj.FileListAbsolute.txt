@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\ConsoleApp142\ConsoleApp142\bin\Debug\ConsoleApp142.exe.config
+C:\Users\user\source\repos\ConsoleApp142\ConsoleApp142\bin\Debug\ConsoleApp142.exe
+C:\Users\user\source\repos\ConsoleApp142\ConsoleApp142\bin\Debug\ConsoleApp142.pdb
+C:\Users\user\source\repos\ConsoleApp142\ConsoleApp142\obj\Debug\ConsoleApp142.csprojAssemblyReference.cache
+C:\Users\user\source\repos\ConsoleApp142\ConsoleApp142\obj\Debug\ConsoleApp142.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ConsoleApp142\ConsoleApp142\obj\Debug\ConsoleApp142.exe
+C:\Users\user\source\repos\ConsoleApp142\ConsoleApp142\obj\Debug\ConsoleApp142.pdb
+C:\Users\user\Downloads\etlap2\ConsoleApp142\bin\Debug\ConsoleApp142.exe.config
+C:\Users\user\Downloads\etlap2\ConsoleApp142\bin\Debug\ConsoleApp142.exe
+C:\Users\user\Downloads\etlap2\ConsoleApp142\bin\Debug\ConsoleApp142.pdb
+C:\Users\user\Downloads\etlap2\ConsoleApp142\obj\Debug\ConsoleApp142.csprojAssemblyReference.cache
+C:\Users\user\Downloads\etlap2\ConsoleApp142\obj\Debug\ConsoleApp142.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\etlap2\ConsoleApp142\obj\Debug\ConsoleApp142.exe
+C:\Users\user\Downloads\etlap2\ConsoleApp142\obj\Debug\ConsoleApp142.pdb
