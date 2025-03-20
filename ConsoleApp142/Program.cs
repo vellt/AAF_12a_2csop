@@ -120,6 +120,96 @@ namespace ConsoleApp142
             etelek.Where(x => x.Szenh <= x.Energia).Select(x => $"{x.Neve} {x.Szenh} {x.Energia}")
                 .ToList().ForEach(x => Console.WriteLine(x));
 
+            // Írassuk ki egy-egy adott kategóriához tartozó ételek 
+            // átlagos árát 2 tizedesre kerekítve!
+            etelek.GroupBy(x => x.Kategoria).Select(x => new
+            {
+                Kategoria = x.Key,
+                Atlagar = x.Average(y => y.Ara)
+            }).Select(x => $"{x.Kategoria}: {Math.Round(x.Atlagar, 2)}")
+            .ToList().ForEach(x => Console.WriteLine(x));
+
+            // Határozzuk meg, hogy az "L" kategóriában VAN-e legalább egy étel, 
+            // amelynek a szénhidrát tartalma meghaladja az 50g - ot!
+            int db = etelek.Where(x => x.Kategoria == 'L' && x.Szenh > 50).Count();
+            if (db > 0) Console.WriteLine("Van");
+            else Console.WriteLine("Nincs");
+
+            // VAN-e olyan kategória amelyikben van legalább 10 étel
+            bool vanE10Nagyobb = etelek.GroupBy(x => x.Kategoria).Select(x => x.Count())
+                .ToList().Exists(x => x >= 10);
+            Console.WriteLine(vanE10Nagyobb ? "van" : "nincs");
+
+            // Határozzuk meg azokat az ételeket, 
+            // amelyeknek a neve tartalmazza a "leves" szórészletet!
+            etelek.Where(x => x.Neve.ToLower().Contains("leves"))
+                .Select(x => $"{x.Neve} {x.Kategoria}")
+                .ToList().ForEach(x => Console.WriteLine(x));
+
+            // Határozzuk meg azokat az ételeket, 
+            //amelyeknek a neve tartalmazza a "leves" ÉS "csirke" szórészletet!
+            etelek.Where(x=>x.Neve.Contains("leves") && x.Neve.Contains("csirke"))
+                .Select(x => $"{x.Neve} {x.Kategoria}")
+                .ToList().ForEach(x => Console.WriteLine(x));
+
+            // Határozzuk meg azokat az ételeket, amelyeknek a neve 
+            // tartalmazza a "leves" VAGY "csirke" szórészletet!
+            etelek.Where(x => x.Neve.Contains("leves") || x.Neve.Contains("csirke"))
+                .Select(x => $"{x.Neve} {x.Kategoria}")
+                .ToList().ForEach(x => Console.WriteLine(x));
+            
+            //Írassuk ki az összes olyan ételt, amelynek az ára 500 forint alatt van, de energia tartalma
+            //legalább 200 kcal!
+            etelek.Where(x => x.Ara < 500 && x.Energia >= 200)
+                .Select(x => $"{x.Neve} {x.Energia}")
+                .ToList().ForEach(x => Console.WriteLine(x));
+
+            //!DISTINCT! Mely kategóriákban vannak jelen a 
+            //csirke szórészletet tartalmazó ételek?
+            etelek.Where(x => x.Neve.Contains("csirke"))
+                .Select(x => x.Kategoria).Distinct()
+                .ToList()
+                .ForEach(x => Console.WriteLine(x));
+
+            // Írassuk ki a levesek árait külön külön, egy egy ár egyszer szerepelhet!
+            etelek.Where(x=>x.Kategoria=='L').Select(x=>x.Ara).Distinct().ToList()
+                .ForEach(x => Console.WriteLine(x));
+
+            //A leves "L" kategóriákba tartozó ételek árait rendezzük csökkenő sorrendben. Egy ár egyszer
+            // szerepeljen!
+            etelek.Where(x => x.Kategoria == 'L').OrderByDescending(x => x.Ara)
+                .Select(x => $"{x.Ara} {x.Kategoria}").ToList()
+                .ForEach(x => Console.WriteLine(x));
+
+            // Határozzuk meg azokat az ételeket, amelyek energiatartalma a 
+            // szénhidráttartalmának legalább kétszerese!
+            etelek.Where(x => x.Energia  >= x.Szenh*2)
+                .Select(x => $"{x.Neve} {x.Szenh} {x.Energia}")
+                .ToList().ForEach(x => Console.WriteLine(x));
+
+            // Írassuk ki azokat az ételeket, 
+            //amelyek energiatartalma meghaladja az átlagos energiatartalmat.
+            double atlag = etelek.Select(x => x.Energia).Sum() / 
+                Convert.ToDouble(etelek.Count());
+            etelek.Where(x => atlag < x.Energia).Select(x => $"{x.Neve} {x.Ara}")
+                .ToList().ForEach(x => Console.WriteLine(x));
+            Console.WriteLine(atlag);
+
+            // Határozzuk meg, hogy melyik ételkategóriában van a 
+            // legtöbb 200 alatti energiatartalmú étel, és
+            // ez hány darab ételt jelent!
+            var elso = etelek.Where(x => x.Energia < 200).GroupBy(x => x.Kategoria)
+                .Select(x => new
+                {
+                    Kategoria = x.Key,
+                    Darabszam = x.Count()
+                }).OrderByDescending(x => x.Darabszam).First();
+            Console.WriteLine($"{elso.Kategoria}: {elso.Darabszam} db");
+
+            // Mennyibe kerülne az összes leves és desszert?
+            int levesEsDesszertAr = etelek.Where(x => x.Kategoria == 'L' || x.Kategoria == 'D')
+                .Sum(x => x.Ara);
+            Console.WriteLine(levesEsDesszertAr);
             Console.ReadKey();
         }
 

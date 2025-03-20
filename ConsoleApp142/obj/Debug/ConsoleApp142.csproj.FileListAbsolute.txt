@@ -12,3 +12,7 @@ C:\Users\user\Downloads\etlap2\ConsoleApp142\obj\Debug\ConsoleApp142.csprojAssem
 C:\Users\user\Downloads\etlap2\ConsoleApp142\obj\Debug\ConsoleApp142.csproj.CoreCompileInputs.cache
 C:\Users\user\Downloads\etlap2\ConsoleApp142\obj\Debug\ConsoleApp142.exe
 C:\Users\user\Downloads\etlap2\ConsoleApp142\obj\Debug\ConsoleApp142.pdb
+C:\Users\user\Downloads\AAF_12a_2csop-2449aab6-95e0-4443-9ee5-acfde4f052b2\AAF_12a_2csop-2449aab6-95e0-4443-9ee5-acfde4f052b2\ConsoleApp142\obj\Debug\ConsoleApp142.csprojAssemblyReference.cache
+C:\Users\user\Downloads\AAF_12a_2csop-2449aab6-95e0-4443-9ee5-acfde4f052b2\AAF_12a_2csop-2449aab6-95e0-4443-9ee5-acfde4f052b2\ConsoleApp142\obj\Debug\ConsoleApp142.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\AAF_12a_2csop-2449aab6-95e0-4443-9ee5-acfde4f052b2\AAF_12a_2csop-2449aab6-95e0-4443-9ee5-acfde4f052b2\ConsoleApp142\obj\Debug\ConsoleApp142.exe
+C:\Users\user\Downloads\AAF_12a_2csop-2449aab6-95e0-4443-9ee5-acfde4f052b2\AAF_12a_2csop-2449aab6-95e0-4443-9ee5-acfde4f052b2\ConsoleApp142\obj\Debug\ConsoleApp142.pdb
