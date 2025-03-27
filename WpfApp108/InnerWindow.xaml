@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp108.InnerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp108"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="InnerWindow" Height="600" Width="1000" Background="Black">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox Name="lista" Background="Black" BorderBrush="Transparent" Foreground="White" FontSize="20"/>
+        <Border Grid.Column="1" Background="White" CornerRadius="10" Margin="10">
+            <StackPanel Margin="10">
+                <Image Name="kep" Source="./Images/02.jpg"/>
+                <TextBlock TextWrapping="Wrap" Name="nev" Text="Cirmi" FontWeight="Bold" FontSize="25" Margin="0 0 0 10"/>
+                <TextBlock Name="kor" Text="Kor:" FontSize="20"/>
+                <TextBlock Name="nem" Text="Nem:" FontSize="20"/>
+                <TextBlock Name="szorhossz" Text="Szorhossz" FontSize="20"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
