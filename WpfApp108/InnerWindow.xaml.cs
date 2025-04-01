@@ -22,8 +22,10 @@ namespace WpfApp108
     /// </summary>
     public partial class InnerWindow : Window
     {
+        bool isOffline = false;
         public InnerWindow(bool isOffline)
         {
+            this.isOffline = isOffline;
             InitializeComponent();
             this.Closing += InnerWindow_Closing;
             if (isOffline == true)
@@ -41,25 +43,38 @@ namespace WpfApp108
                         FurLenght = x[4],
                         ImagePath = x[5]
                     }).ToList();
-                lista.DisplayMemberPath = "Name";
+                
             }
             else
             {
-                lista.ItemsSource = Backend.GET("https://nodejs109.dszcbaross.edu.hu/cats")
+                lista.ItemsSource = Backend.GET("http://nodejs1.dszcbaross.edu.hu:21009/cats")
                     .Send().As<List<Cica>>();
             }
+            lista.DisplayMemberPath = "Name";
             lista.SelectionChanged += Lista_SelectionChanged;
         }
 
         private void Lista_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Cica kivalasztottcica = lista.SelectedItem as Cica;
+            if (lista.SelectedItem is Cica)
+            {
+                Cica kivalasztottcica = lista.SelectedItem as Cica;
 
-            nev.Text = kivalasztottcica.Name;
-            kor.Text = $"Kor: {kivalasztottcica.Age}";
-            szorhossz.Text = $"szorhossz: {kivalasztottcica.FurLenght}";
-            nem.Text = $"neme: {kivalasztottcica.Gender}";
-            kep.Source = new BitmapImage(new Uri($"./Images/{kivalasztottcica.ImagePath}", UriKind.Relative));
+                nev.Text = kivalasztottcica.Name;
+                kor.Text = $"Kor: {kivalasztottcica.Age}";
+                szorhossz.Text = $"szorhossz: {kivalasztottcica.FurLenght}";
+                nem.Text = $"neme: {kivalasztottcica.Gender}";
+                if (isOffline)
+                {
+                    kep.Source = new BitmapImage(new Uri($"./Images/{kivalasztottcica.ImagePath}", UriKind.Relative));
+                }
+                else
+                {
+                    kep.Source = new BitmapImage(new Uri(kivalasztottcica.ImagePath, UriKind.Absolute));
+                }
+            }
+            
+            
 
         }
 
