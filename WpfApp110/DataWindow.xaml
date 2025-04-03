@@ -13,8 +13,17 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
+        <StackPanel Grid.Column="0" Margin="15">
+            <Expander Header="Szerző" FontSize="15" Margin="5">
+                <ComboBox Name="szerzok" Margin="0 5 0 0"/>
+            </Expander>
+            <Button Name="gomb" Background="SteelBlue" Padding="5" Margin="5" Foreground="White"
+                    Content="Alkalmaz"/>
+        </StackPanel>
+        
+
         <GroupBox Grid.Column="1" Header="találat" Margin="15">
-            <DataGrid/>
+            <DataGrid Name="tabla"/>
         </GroupBox>
     </Grid>
 </Window>

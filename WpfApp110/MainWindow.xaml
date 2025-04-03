@@ -9,7 +9,7 @@
         Title="Képek" SizeToContent="Height" Width="450">
     <StackPanel Margin="10">
         <Image Source="./Images/photographers.jpg" Margin="0 0 0 10"/>
-        <Button Padding="10" Background="SteelBlue"
+        <Button Name="gomb" Padding="10" Background="SteelBlue"
                 Foreground="White" FontSize="25" FontWeight="Bold"
                 Content="Belépés"/>
     </StackPanel>
