@@ -8,11 +8,11 @@
         Title="MovieWindow" SizeToContent="Height" Width="300">
     <Border Background="LightGray" Margin="10" CornerRadius="10">
         <StackPanel Margin="10">
-            <Image Stretch="UniformToFill"/>
-            <TextBlock Text="Mickey 17" FontSize="20" FontWeight="Bold"/>
+            <Image Name="kep" Stretch="UniformToFill"/>
+            <TextBlock Name="cim" Text="Mickey 17" FontSize="20" FontWeight="Bold" TextWrapping="Wrap"/>
             <StackPanel Orientation="Horizontal">
-                <Image Source="./Images/12.png"/>
-                <TextBlock Text="Sci-fi" FontSize="20" Margin="5 0 0 0"/>
+                <Image Name="korhatar" Source="./Images/12.png"/>
+                <TextBlock Name="mufaj" Text="Sci-fi" FontSize="20" Margin="5 0 0 0"/>
             </StackPanel>
         </StackPanel>
     </Border>

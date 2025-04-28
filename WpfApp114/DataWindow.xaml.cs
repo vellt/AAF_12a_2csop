@@ -42,6 +42,24 @@ namespace WpfApp114
             korhatar.SelectedIndex = 0;
 
             gomb.Click += Gomb_Click;
+
+            lista.SelectionChanged += Lista_SelectionChanged;
+        }
+
+        private void Lista_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Movie kivalasztottFilm = lista.SelectedItem as Movie;
+
+            MovieWindow mw = new MovieWindow();
+            mw.Owner = this;
+            mw.kep.Source = 
+                new BitmapImage(new Uri(kivalasztottFilm.Image, UriKind.Absolute));
+            mw.cim.Text = kivalasztottFilm.Title;
+            mw.mufaj.Text = kivalasztottFilm.Genre;
+            mw.korhatar.Source = 
+                new BitmapImage(new Uri($"./Images/{kivalasztottFilm.AgeRating}.png", UriKind.Relative));
+            mw.Show();
+            
         }
 
         private void Gomb_Click(object sender, RoutedEventArgs e)
