@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp121.DataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp121"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Icon="Images/favicon.ico"
+        Title="Adatbázis" Height="450" Width="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Content="Szűrő">
+            
+        </GroupBox>
+    </Grid>
+</Window>
