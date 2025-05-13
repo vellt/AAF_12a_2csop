@@ -10,27 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp121
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ProductWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ProductWindow : Window
     {
-        public MainWindow()
+        public ProductWindow()
         {
             InitializeComponent();
-            gomb.Click += Gomb_Click;
-        }
-
-        private void Gomb_Click(object sender, RoutedEventArgs e)
-        {
-            DataWindow dw = new DataWindow();
-            dw.Show();
-            this.Close();
         }
     }
 }

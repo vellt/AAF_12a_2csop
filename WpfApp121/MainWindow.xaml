@@ -14,7 +14,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="Images/banner3.jpg"/>
         </Grid.Background>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Bottom"
+        <Button Name="gomb" HorizontalAlignment="Center" VerticalAlignment="Bottom"
                Background="Teal" FontWeight="Bold" BorderThickness="5" 
                 BorderBrush="White" Content="Belépés" Foreground="White"
                 Width="200" Margin="25" Padding="10"/>

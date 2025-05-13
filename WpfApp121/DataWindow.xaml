@@ -10,11 +10,26 @@
         Title="Adatbázis" Height="450" Width="700">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <GroupBox Content="Szűrő">
-            
+        <!--bal oldal-->
+        <GroupBox Header="Szűrő" Margin="15">
+            <StackPanel>
+                <Expander Header="Kategória" Margin="5">
+                    <ComboBox Name="kategoria"/>
+                </Expander>
+                <Expander Header="Cím" Margin="5">
+                    <TextBox Name="kereso"/>
+                </Expander>
+                <Button Name="gomb" Content="Alkalmaz" Margin="5"
+                        Background="Teal" Padding="5"
+                        Foreground="White"/>
+            </StackPanel>
+        </GroupBox>
+        <!--másik bal (jobb)-->
+        <GroupBox Header="Találat" Margin="15" Grid.Column="1">
+            <ListBox Name="lista"/>
         </GroupBox>
     </Grid>
 </Window>
