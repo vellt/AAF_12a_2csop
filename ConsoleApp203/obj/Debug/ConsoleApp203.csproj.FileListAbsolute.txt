@@ -1,0 +1,9 @@
+C:\Users\user\source\repos\ConsoleApp203\ConsoleApp203\bin\Debug\ConsoleApp203.exe.config
+C:\Users\user\source\repos\ConsoleApp203\ConsoleApp203\bin\Debug\ConsoleApp203.exe
+C:\Users\user\source\repos\ConsoleApp203\ConsoleApp203\bin\Debug\ConsoleApp203.pdb
+C:\Users\user\source\repos\ConsoleApp203\ConsoleApp203\bin\Debug\NetworkHelper.dll
+C:\Users\user\source\repos\ConsoleApp203\ConsoleApp203\obj\Debug\ConsoleApp203.csprojAssemblyReference.cache
+C:\Users\user\source\repos\ConsoleApp203\ConsoleApp203\obj\Debug\ConsoleApp203.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ConsoleApp203\ConsoleApp203\obj\Debug\ConsoleApp203.csproj.CopyComplete
+C:\Users\user\source\repos\ConsoleApp203\ConsoleApp203\obj\Debug\ConsoleApp203.exe
+C:\Users\user\source\repos\ConsoleApp203\ConsoleApp203\obj\Debug\ConsoleApp203.pdb
